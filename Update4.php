@@ -34,7 +34,7 @@ function change(){
         echo color("red","===========(REDEEM VOUCHER)===========");
         reff:
         $data = '{"referral_code":"G-CVNN2Q5"}';    
-        $claim = request("/customer_referrals/v1/campaign/enrolment", $token, $data);
+        $claim = request("/customer_/v1/campaign/enrolment", $token, $data);
         $message = fetch_value($claim,'"message":"','"');
         if(strpos($claim, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("green","+] Message: ".$message);
